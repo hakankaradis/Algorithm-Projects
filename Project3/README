@@ -1,0 +1,5 @@
+As with the first two programs...  Sort integers, this time using heap sort.
+You will have to implement max-heapify (this is the algorithm that merges two heaps, by checking for the largest of three elements); 
+use this to implement the fast heap construction method (which should be O(n)).
+ 
+Things to watch for: the book indexes arrays from 1, while your code should index from 0.  Make sure you understand how to compute the left and right elements of a node in the heap, and so on.
