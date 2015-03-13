@@ -1,0 +1,11 @@
+For this assignment, you'll find the longest common substring of two strings.  Each string will be on it's own line, there will be no spaces, 
+and none of the strings will be longer than 1000 characters.  You should be able to read the strings in with a simple scanf (i.e., char s1[10001]; char s2[1001]; scanf("%s %s", s1, s2;).
+ 
+Print out the length of the longest common substring, followed by the substring.  For example, if the two strings are
+ABCDEFG
+XBACMWFE
+A long common substring would be BCF (the letters appear in the same order in both strings).  Your program would print out
+3
+BCF
+There are other strings of length three (for example ACE).  It doesn't matter which one you print out, as long as it's the longest one.
+Use dynamic programming, and the problem is illustrated nicely in the book.
