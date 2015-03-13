@@ -1,0 +1,24 @@
+Program 2 is similar to program 1, except with Quicksort.
+Implement quicksort, as shown in the Cormen text, with a few specific implementation features.
+
+Use the Hoare partition function (the one that moves indices in from both the left and right, one step at a time), rather than the Lomuto partition function.
+The Hoare partition function does not return the pivot element in the "correct" location.  With the recursive calls to quicksort, the book shows 
+q = partition, quicksort(p, q - 1), quicksort(q + 1, r).  This will not work with the Hoare partition.  Think carefully about what the partition function returns, and adjust your code as needed.
+Implement the pivot randomization function.  You may need to think about this as well.
+Input will be a bunch of integers, one per line.  The first number will be the input size, with subsequent lines being the numbers to sort.  Sort in ascending order.  
+For example, an input would be like this:
+3
+57
+24
+109
+This is three numbers (57, 24, 109).  Your program should output the following.
+24
+57
+109
+Read from standard input, write to standard output, don't add any other output than the numbers that you sorted.  Please check to make sure your program works.  
+No input file will have more than 100,000 numbers in it; go ahead and make a static array of that size.
+A simple program to generate a bunch of data is randdata.c.  Run this with a single integer command line argument, and it will generate that many random integers 
+(with the number of integers as the first line).  Redirect the output to a file for testing.
+
+Once you have your quicksort running, generate some big input files, and compare it against insertion sort.  
+You might scale up the size of inputs your program accepts (you should be able to make arrays that are tens of millions easily on any machine).  
