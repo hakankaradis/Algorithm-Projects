@@ -1,0 +1,35 @@
+Program 1 should be trivial.
+Implemented insertion sort, as shown in the Cormen text;  
+It's easy to do, fun, and educational.Input will be a bunch of integers, one per line.  
+The first number will be the input size, with subsequent lines being the numbers to sort.  Sort in ascending order.  
+For example, an input would be like this:
+3
+57
+24
+109
+This is three numbers (57, 24, 109).  Your program should output the following.
+24
+57
+109
+Read from standard input, write to standard output, don't add any other output than the numbers that you sorted.  Please check to make sure your 
+program works.  No input file will have more than 100,000 numbers in it; go ahead and make a static array of that size.
+A simple program to generate a bunch of data is randdata.c.  Run this with a single integer command line argument, 
+and it will generate that many random integers (with the number of integers as the first line).  Redirect the output to a file for testing.
+
+/* randdata.c */
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+  int i, n;
+
+  sscanf(argv[1], "%d", &n);
+
+  printf("%d\n", n);
+
+  for (i = 0; i < n; ++i)
+    {
+      printf("%d\n", random());
+    }
+}
+
