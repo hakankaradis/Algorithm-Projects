@@ -1,0 +1,34 @@
+In this assignment, you'll need to construct a Huffman coding tree, and then decode a message.  The input to your program will consist of the number of letters, 
+the letters and their frequncy, then a number of bits (zeros and ones).  
+When building your Huffman tree, tie breaking is VERY IMPORTANT.  The top of your heap should have the least frequent letter.  
+If there is a tie for frequency, the letter with the lowest ASCII order is first.  When comparing two "combination letters," use the lowest ASCII value in the subtree.
+For example, here's an input
+4
+A  25
+C  24
+B  25
+D   1
+8
+0 0 0 1 1 0 1 1
+ 
+The Huffman tree will be built by first merging D and C (frequency of 1 and 24, respectively; D is on the "left" or "0" side).  
+This results in a pairing that will have a frequency of 25, with the letter "C" used for tie breaking.  
+A and B are paired next (A, B, and DC have frequencies of 25, with the letters breaking the tie for A and B), with A on the left and B on the right.  
+Finally, DC is paired with AB (DC has a frequency of 25, while AB has a frequency of 50).
+Now that the tree is built, you can decode the message.  Each letter has 2 bits in this tree.  The "secret message" is DCAB for the above example.
+There will not be more than 100 different letters, and frequencies will be small integers.  Your program should read the input from the console, and print out the secret message.
+
+Here's another example....  secret2.txt
+
+/* secret2.txt */
+8
+s 3
+e 4
+c 1
+r 1
+t 1
+a 1
+g 1
+m 1
+36
+0 1 1 1 1 0 0 1 0 0 0 1 1 0 0 1 1 0 1 1 1 1 0 1 0 1 1 0 0 0 1 0 1 0 1 1
