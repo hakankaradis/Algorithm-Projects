@@ -1,0 +1,55 @@
+For this assignment, we'll build an optimal binary search tree.  All of the "data" will be at the leaf nodes, and the cost to access any particular data element will be the number of branches 
+we have to traverse to get to it (multiplied by the number of times we make that access).
+Input to the file will be the number of items in the tree, and then an integer indicating the number of accesses for each of these items 
+(they will be in sorted order -- you can think of them as A, B, C, D, ..., although that won't be part of the input, and won't really matter).  
+For example, if we have 4 items, with item A being accessed 5 times, item B is accessed 4 times, item C is accessed once, and item D is accessed 200 times, 
+w could have a tree as follows:  ((A(BC))D).  There's the root node, with D as the right branch, and a subtree with ABC in the left branch.  
+The left subtree has a branch down to A on the left, and then a subtree with B and C to the right.
+The depth of D is 1, the depth of A is 2, and the depth of B and C are 3.  The total cost of the tree is 200*1 + 5*2 + 4*3 + 1*3.
+The input file for this problem looks like this:
+4
+5
+4
+1
+200
+That's the number of items, then the number of accesses for each.  Your program only needs to print out the total cost of the optimal tree (in this case 225).
+You can assume that no input file will have more than 1000 items.  Use dynamic programming to solve the problem; your code will look very much like the optimal 
+matrix multiply algorithm from the book.
+ 
+A second example with 6 values:
+ 
+6
+33
+1
+409
+2
+1
+34
+Result: 997
+ 
+ 
+And a third example with 20:
+ 
+20
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1000
+11
+12
+13
+14
+15
+16
+17
+18
+19
+2000
+ 
+Result 5968
