@@ -1,0 +1,13 @@
+Use compuational geometry tricks, and divide-and-conquer, to find the closest pair of points in O(n log n) time.
+Input will be the number of points, followed by the locations of the points as X Y pairs.  For example
+3
+10 34
+5 17
+22 61
+Use Euclidean distance.  The sample has three points; easy to solve with just brute force.  
+The test examples will have hundreds of thousands of points (make sure your program can handle up to 10 million points).
+Print out the distance between the closest pair.
+
+test1.txt -- closest distance 1.0000
+test2.txt -- closest distance 15.297058
+test3.txt -- closest distance 1.414214

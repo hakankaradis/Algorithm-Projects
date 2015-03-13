@@ -1,0 +1,10 @@
+The input for this program will be similar to the graph from Dijkstra -- but instead of the length, the edge will have capacity.  
+Compute the maximum flow from vertex 0 to the highest numbered vertex (V - 1), and print that out.  For the following:
+3 2
+0 1 7
+1 2 9
+ 
+There are three vertices, two edges.  Every edge is directed (there is a capacity of 7 from 0 to 1, and a capacity of 9 from 1 to 2).  For this simple graph, you would print out "7."
+Implement the Edmonds-Karp algorithm (not Ford-Fulkerson); find a path using breadth-first search, take the capacity away on the forward edge, and give the capacity back on the reverse.
+There will be input graphs where you MUST use the residual graph.
+ 
