@@ -1,0 +1,20 @@
+For program 7, implement Dijkstra's shortest path algorithm.  Compute the distance from vertex 0 to the vertex that is furthest away from vertex 0 
+(you'll need to compute the distance to EVERY vertex, and then print the maximum value).  Note that the graphs might not be connected -- so print the distance to the furthest connected vertex.
+The input will consist of the number of vertices, the number of edges, and then each edge (with start vertex, end vertex, and the edge length).  For example:
+3 2
+0 1 7
+1 2 9
+This is three vertices (numbered 0, 1, 2), two edges.  The first edge connects vertex 0 to vertex 1, with a length of 7.  NOTE: the edges are not directed, 
+so you can go from 0 to 1, or 1 to 0, with a length of 7.  The second edge connects vertex 1 to 2, with a length of 9.  For this input, your program should print "16," 
+the distance from vertex 0 to the most distant connected vertex (vertex 2).
+Here are a few test files.
+
+datafile1.txt -- Maximum distance 16
+datafile2.txt -- Maximum distance 5
+datafile3.txt -- Maximum distance 61
+You will need to implement an abstract graph representation (linked lists, or resizable arrays from each vertex).  DO NOT TRY TO MAKE A MATRIX.  IT WILL NOT WORK.  
+Write your own data structures for this.
+Maintain the distance to the vertices in a binary heap.  Write your own heap code.  You can either implement an extended heap 
+(with pointers into the heap data structure so that you can do a "heap_decrease_key" operation), or you can insert a vertex into the heap multiple time 
+(check to see if it has already been processed when you pop the vertex out).
+
