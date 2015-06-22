@@ -67,15 +67,11 @@ void Build_Max_Heap(int data[]){
 int Left(int i){   // return left node
   if((2*i+1) < n)
   	return 2*i+1;  
-  else
-	return 100;   // if exceed size of array return 100
 }
 
 int Right(int i){  // return right node
   if((2*i+2) < n)
   	return 2*i+2;
-  else 
-    return 101; // if exceed size of array return 101
 }
 
 
